@@ -50,8 +50,7 @@
 	}
 	
 	$.keyNav.parseKey = function(key){
-		if(parseInt(key) >= 0){ key = parseInt(key);}
-		else{ key = $.keyNav.keys[key.toLowerCase().replace(/\s/g,'_')];}
+		if(!(/\d+/.test(key))){ key = $.keyNav.keys[key.toLowerCase().replace(/\s/g,'_')];}
 		if(key == null){ return false;}
 		else{ return key;}
 	}

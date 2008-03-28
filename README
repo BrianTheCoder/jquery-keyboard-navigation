@@ -9,6 +9,8 @@ $.whenPressed('j',function(){ alert('you pressed j');});
 
 $('h1').whenPressed('h',function(){ $(this).hide();});
 
+if you pass it a string it will look through its dictionary for the keycode. If passed an integer, it will assume thats the keycode and use that
+
 I also added some helper methods:
 
 $('a:first').navigateTo();
