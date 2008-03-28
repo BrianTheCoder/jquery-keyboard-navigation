@@ -1,0 +1,39 @@
+A simple way to add key handling to jquery
+
+To start just add 
+$.keyNav();
+
+Then you can do fancy stuff like:
+
+$.whenPressed('j',function(){ alert('you pressed j');});
+
+$('h1').whenPressed('h',function(){ $(this).hide();});
+
+I also added some helper methods:
+
+$('a:first').navigateTo();
+
+will set the pages location to anchor's href.
+
+there's also tests for the keycode
+
+$.isLetter(keyCode) will check to see if the key code is a letter
+
+$.isNumber(keyCode) will check to see if the key is a number, including the numpad
+
+
+$('div').scrollTo() will scroll to fit the element in the window if its outside the viewable area
+
+
+$('div').find('h1').or('p') will return h1 if it exists, if not it will look for p 
+
+You can also suspend watching the keys (it does automatically when you enter an input field) with
+
+$.keyNav.unwatchKeys();
+
+then start again
+
+$.keyNav.watchKeys();
+
+
+Oh and this is a product of Downtown Cartel (http://downtowncartel.com) and is in use(or will be soon) on http://hashtags.org
