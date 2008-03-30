@@ -80,7 +80,6 @@
 	
 	$.fn.or = function(str){
 		if(this.length > 0){
-			console.log($(this))
 			return $(this);
 		}else{
 			return this.prevObject.find(str);
